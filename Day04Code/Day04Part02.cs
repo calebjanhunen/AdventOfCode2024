@@ -1,15 +1,11 @@
-﻿namespace AdventOfCode2024.Day02Code
+﻿namespace AdventOfCode2024.Day04Code
 {
-    public class Day02Part02 : Day02
+    public class Day04Part02 : Day04Part01
     {
         public static int Solve()
         {
-            var fileLines = Utils.ReadFile("day2.txt");
+            var fileLines = Utils.ReadFile("day4.txt");
             var matrix = ConvertTo2DArray(fileLines);
-            // Loop in 3x3 chunks
-            //  ensure edges are in bound
-            // check if the center [i + 1, j + 1] is an A
-            // check the corners (if 1 corner is M the opposite corner has to be an S, vice versa)
             int result = 0;
             for (int i = 0; i < matrix.GetLength(0); i++)
             {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace AdventOfCode2024.Day02Code
+namespace AdventOfCode2024.Day04Code
 {
-    public class Day02
+    public class Day04Part01
     {
         protected enum Direction
         {
@@ -105,16 +105,8 @@ namespace AdventOfCode2024.Day02Code
             return result;
         }
 
-        protected static int FindRestOfString(char[,] matrix, int i, int j, Direction direction, string stringToFind)
+        private static int FindRestOfString(char[,] matrix, int i, int j, Direction direction, string stringToFind)
         {
-
-            // get the current letter
-            // if letter is last letter in string -> add to result, return
-            // get the next letter
-            // get new i and j
-            // if i or j result in out of bound -> return
-            // if matrix at new i and j != next letter -> return
-            //FindNextLetter(matrix, newI, newJ, direction, stringToFInd)
             char currentLetter = matrix[i, j];
             if (IsLastLetter(stringToFind, currentLetter))
             {
@@ -137,7 +129,7 @@ namespace AdventOfCode2024.Day02Code
             return FindRestOfString(matrix, newI, newJ, direction, stringToFind);
         }
 
-        protected static char GetNextLetter(string stringToFind, char currentLetter)
+        private static char GetNextLetter(string stringToFind, char currentLetter)
         {
             var index = stringToFind.IndexOf(currentLetter);
             if (index == stringToFind.Length - 1)
@@ -150,17 +142,17 @@ namespace AdventOfCode2024.Day02Code
             }
         }
 
-        protected static char GetFirstLetter(string stringToFind)
+        private static char GetFirstLetter(string stringToFind)
         {
             return stringToFind[0];
         }
 
-        protected static bool IsLastLetter(string stringToFind, char currentLetter)
+        private static bool IsLastLetter(string stringToFind, char currentLetter)
         {
             return stringToFind.IndexOf(currentLetter) == stringToFind.Length - 1;
         }
 
-        protected static (int i, int j) GetUpdatedIAndJ(int i, int j, Direction direction)
+        private static (int i, int j) GetUpdatedIAndJ(int i, int j, Direction direction)
         {
             var delta = DirectionValues[direction];
 
@@ -185,19 +177,16 @@ namespace AdventOfCode2024.Day02Code
         protected static char[,] ConvertTo2DArray(string[] lines)
         {
 
-            // Determine dimensions of the 2D array
             int rows = lines.Length;
-            int columns = lines[0].Length; // Assuming all lines have the same length
+            int columns = lines[0].Length;
 
-            // Create the 2D array
             char[,] array = new char[rows, columns];
 
-            // Populate the 2D array
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    array[i, j] = lines[i][j]; // Assign each character to the 2D array
+                    array[i, j] = lines[i][j];
                 }
             }
 

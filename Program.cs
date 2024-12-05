@@ -1,5 +1,5 @@
 ﻿using System;
-using AdventOfCode2024.Day02Code;
+using AdventOfCode2024.Day04Code;
 
 namespace AdventOfCode2024
 {
@@ -9,7 +9,7 @@ namespace AdventOfCode2024
         {
             //Day01.Solve();
             //Console.WriteLine(Day02.Solve("XMAS"));
-            Console.WriteLine(Day02Part02.Solve());
+            Console.WriteLine(Day04Part02.Solve());
 
             Console.ReadLine();
         }
