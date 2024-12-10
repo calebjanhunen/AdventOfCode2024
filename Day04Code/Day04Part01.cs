@@ -30,7 +30,7 @@ namespace AdventOfCode2024.Day04Code
 
         public static int Solve(string stringToFind)
         {
-            string[] lines = Utils.ReadFile("day2.txt");
+            string[] lines = Utils.ReadFile("day4.txt");
             char[,] matrix = ConvertTo2DArray(lines);
 
             var firstLetter = GetFirstLetter(stringToFind);
