@@ -48,6 +48,7 @@
     <Compile Include="Day04Code\Day04Part02.cs" />
     <Compile Include="Day04Code\Day04Part01.cs" />
     <Compile Include="Day05Code\Day05Part01.cs" />
+    <Compile Include="Day10Code\Day10Part01.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
@@ -56,10 +57,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="_Inputs\day1.txt" />
-    <Content Include="_Inputs\day4.txt" />
-    <Content Include="_Inputs\day5_order_rules.txt" />
-    <Content Include="_Inputs\day5_pages_to_produce.txt" />
+    <Content Include="Inputs\day1.txt" />
+    <Content Include="Inputs\day10.txt" />
+    <Content Include="Inputs\day4.txt" />
+    <Content Include="Inputs\day5_order_rules.txt" />
+    <Content Include="Inputs\day5_pages_to_produce.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
